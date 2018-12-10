@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="pidev_map-ear">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="pidev_map-web.war" deploy-path="/" handle="module:/resource/pidev_map-web/pidev_map-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="pidev_map-ejb.jar" deploy-path="/" handle="module:/resource/pidev_map-ejb/pidev_map-ejb">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="javax.ws.rs-api.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/javax/ws/rs/javax.ws.rs-api/2.0-m02/javax.ws.rs-api-2.0-m02.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="json.jar" deploy-path="/" handle="module:/classpath/var/M2_REPO/org/json/json/20170516/json-20170516.jar">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>

@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui" 
+      > 
+	 
+<h:head>
+
+  <meta charset="utf-8"></meta>
+
+  <title>Login</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
+<meta content="yes" name="apple-mobile-web-app-capable"></meta>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"></meta>
+
+<link rel="apple-touch-icon" sizes="57x57" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-57x57.png"></link>
+<link rel="apple-touch-icon" sizes="60x60" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-60x60.png"></link>
+<link rel="apple-touch-icon" sizes="72x72" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-72x72.png"></link>
+<link rel="apple-touch-icon" sizes="76x76" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-76x76.png"></link>
+<link rel="apple-touch-icon" sizes="114x114" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-114x114.png"></link>
+<link rel="apple-touch-icon" sizes="120x120" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-120x120.png"></link>
+<link rel="apple-touch-icon" sizes="144x144" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-144x144.png"></link>
+<link rel="apple-touch-icon" sizes="152x152" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-152x152.png"></link>
+<link rel="apple-touch-icon" sizes="180x180" href="ressources/ressourceAdmin/images/icons/apple-touch-icon-180x180.png"></link>
+<link rel="icon" type="image/png" href="ressources/ressourceAdmin/images/icons/favicon-32x32.png" sizes="32x32"></link>
+<link rel="icon" type="image/png" href="ressources/ressourceAdmin/images/icons/android-chrome-192x192.png" sizes="192x192"></link>
+<link rel="icon" type="image/png" href="ressources/ressourceAdmin/images/icons/favicon-96x96.png" sizes="96x96"></link>
+<link rel="icon" type="image/png" href="ressources/ressourceAdmin/images/icons/favicon-16x16.png" sizes="16x16"></link>
+<link rel="manifest" href="ressources/ressourceAdmin/images/icons/manifest.html"></link>
+<link rel="mask-icon" href="ressources/ressourceAdmin/images/icons/safari-pinned-tab.svg"></link>
+<meta name="msapplication-TileColor" content="#da532c"></meta>
+<meta name="msapplication-TileImage" content="mstile-144x144.html"></meta>
+<meta name="theme-color" content="#ffffff"></meta>
+
+
+
+
+  <!-- Font awesome -->
+  <link rel="stylesheet" href="ressources/ressourceAdmin/css/font-awesome.min.css"></link>
+
+  <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,600' rel='stylesheet' type='text/css'></link>
+
+  
+  <link rel="stylesheet" href="ressources/ressourceAdmin/plugins/iCheck/square/blue.css"></link>
+
+
+  <link rel="stylesheet" href="ressources/ressourceAdmin/css/styles.min.css"></link>
+
+</h:head>
+
+
+<h:body class="login-page">
+	<p:growl showDetail="true" autoUpdate="true" sticky="true"></p:growl>
+  <div class="login-box">
+    <div class="login-logo">
+      <a href="#">Levio</a>
+    </div><!-- /.login-logo -->
+    <div class="login-box-body">
+      <p class="login-box-msg">Sign in to continue</p>
+      <h:form>
+        <div class="form-group has-feedback">
+          <h:inputText value="#{loginBean.user.email}" type="email" styleClass="form-control" placeholder="Email" />
+          <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        </div>
+        <div class="form-group has-feedback">
+          <h:inputSecret value="#{loginBean.user.passwordHash}"  styleClass="form-control" placeholder="Password"/>
+          <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        </div>
+       	
+            <h:commandButton action="#{loginBean.doLogin()}" value="Sign in" styleClass="btn btn-primary btn-block"/>
+        
+      </h:form>
+
+     
+
+      <div class="login-box-footer text-center">
+       
+        <a href="addUser.jsf" class="text-center">Register for a new account &rarr;</a>
+      </div>
+
+    </div><!-- /.login-box-body -->
+  </div><!-- /.login-box -->
+
+  <script src="ressources/ressourceAdmin/js/login.min.js"></script>
+
+</h:body>
+
+
+
+</html>
